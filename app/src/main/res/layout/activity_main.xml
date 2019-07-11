@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:fadeScrollbars="true"
+            android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+            android:scrollbarTrackVertical="?android:attr/fastScrollTrackDrawable"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/background_light" />
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scrollView"
+            android:text="@string/BluetoothStatus" />
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView7"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫描蓝牙" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/button"
+                android:text="蓝牙连接" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/button1"
+                android:text="蓝牙断开" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/RelativeLayout"
+            android:gravity="center"
+            android:text="PH值"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/RelativeLayout"
+            android:layout_toRightOf="@id/textView2"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:textColor="@android:color/background_light"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView2"
+            android:gravity="center"
+            android:text="PH温度"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView3"
+            android:layout_toRightOf="@id/textView2"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:textColor="@android:color/background_light"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView4"
+            android:gravity="center"
+            android:text="电导率"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView4"
+            android:layout_toRightOf="@id/textView2"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:textColor="@android:color/background_light"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView5"
+            android:gravity="center"
+            android:text="电导率温度"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView5"
+            android:layout_toRightOf="@id/textView2"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:textColor="@android:color/background_light"
+            app:autoSizeTextType="uniform" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="读取PH计参数" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/button3"
+                android:text="读取电导率参数" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
